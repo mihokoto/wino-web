@@ -5,6 +5,8 @@ import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { LiveToast } from "@/components/ui/LiveToast";
 import { WaitlistProvider } from "@/context/WaitlistContext";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,6 +27,7 @@ export default function RootLayout({
             {children}
           </SmoothScroll>
           <LiveToast />
+          <SpeedInsights />
         </WaitlistProvider>
       </body>
     </html>
